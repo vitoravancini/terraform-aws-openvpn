@@ -20,7 +20,7 @@ variable "route_zone_id" {
 }
 
 variable "domain" {
-  description = "Public domain to assign to the openVPN host. With a value of 'example.com' The resulting value will be 'vpn.example.com"
+  description = "Public domain to assign to the openVPN host. With a value of 'example.com' The resulting value will be 'example.com"
 }
 
 variable "instance_type" {
