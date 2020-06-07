@@ -15,14 +15,6 @@ variable "public_subnet_ids" {
   description = "Public Subnet IDs"
 }
 
-variable "route_zone_id" {
-  description = "Route Zone ID"
-}
-
-variable "domain" {
-  description = "Public domain to assign to the openVPN host. With a value of 'example.com' The resulting value will be 'example.com"
-}
-
 variable "instance_type" {
   description = "OPenVPN EC2 instance type"
 }
@@ -40,5 +32,17 @@ variable "ebs_size" {
 }
 
 variable "ami" {
+  description = "AMI ID to use for the EC2 instance"
+}
+
+variable "ssh_key_file" {
+  description = "SSH key"
+}
+
+variable "openvpn_clients_file" {
+  description = "File containing openvpn users"
+}
+
+variable "ec2_user" {
   description = "AMI ID to use for the EC2 instance"
 }
