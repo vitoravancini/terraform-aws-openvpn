@@ -44,7 +44,16 @@
     openvpn_route_traffic: false
     openvpn_unified_client_profiles: false
     openvpn_management_enable: false
-    openvpn_client_to_client_via_ip: true
+    openvpn_client_to_client_via_ip: false
   roles:
     - role: easyrsa
     - role: openvpn
+  
+  post_tasks:
+    - name: Configure NAT iptables MASQUERADE rule
+      iptables:
+        table: nat
+        chain: POSTROUTING
+        out_interface: "{{ ansible_default_ipv4.interface }}"
+        jump: MASQUERADE
+      tags: iptables 
