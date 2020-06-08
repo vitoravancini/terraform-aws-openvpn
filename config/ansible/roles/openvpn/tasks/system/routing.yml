@@ -36,5 +36,5 @@
     to_source: "{{ openvpn_nat_address }}"
     comment: vpn_masquerade
   loop: "{{ openvpn_nat_ranges }}"
-  when: iptables_nat_rules.stdout.find("vpn_masquerade") == -1
+  #when: iptables_nat_rules.stdout.find("vpn_masquerade") == -1
   notify: openvpn save iptables

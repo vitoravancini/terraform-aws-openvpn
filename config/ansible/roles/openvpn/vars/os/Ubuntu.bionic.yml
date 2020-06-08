@@ -5,5 +5,5 @@ openvpn_use_pam_plugin_distribution:
 
 openvpn_use_ldap_plugin_distribution: /usr/lib/openvpn/openvpn-auth-ldap.so
 
-openvpn_service: "{{ 'openvpn@server' if ansible_service_mgr == 'systemd' else 'openvpn' }}"
+openvpn_service: openvpn@server
 
