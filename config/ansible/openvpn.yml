@@ -44,7 +44,7 @@
     openvpn_route_traffic: false
     openvpn_unified_client_profiles: false
     openvpn_management_enable: false
-    openvpn_client_to_client_via_ip: false
+    openvpn_client_to_client_via_ip: true
   roles:
     - role: easyrsa
     - role: openvpn
